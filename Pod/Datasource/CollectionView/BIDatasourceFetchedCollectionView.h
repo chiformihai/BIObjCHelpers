@@ -8,11 +8,11 @@
 
 @import UIKit;
 
-#import "BIDatasourceFetchedResultsBase.h"
+#import "BIDatasourceFetchedResultsCallbacks.h"
 
 typedef void(^BIDatasourceFetchedCollectionViewConfigureCell)(id cell, NSIndexPath *indexPath);
 
-@interface BIDatasourceFetchedCollectionView : BIDatasourceFetchedResultsBase<UICollectionViewDataSource>
+@interface BIDatasourceFetchedCollectionView : BIDatasourceFetchedResultsCallbacks<UICollectionViewDataSource>
 
 + (instancetype)datasourceWithCollectionView:(UICollectionView *)collectionView;
 - (instancetype)initWithCollectionView:(UICollectionView *)collectionView;

@@ -70,10 +70,11 @@
 #pragma mark - NSFetchedResultsControllerDelegate Methods
 
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
+    [super controllerWillChangeContent:controller];
     [self.tableView beginUpdates];
 }
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
-    
+    [super controllerDidChangeContent:controller];
     [self.tableView endUpdates];
 }
 
@@ -81,7 +82,8 @@
   didChangeSection:(id <NSFetchedResultsSectionInfo>)sectionInfo
            atIndex:(NSUInteger)sectionIndex
      forChangeType:(NSFetchedResultsChangeType)type {
-    
+    [super controller:controller didChangeSection:sectionInfo atIndex:sectionIndex forChangeType:type];
+
     switch(type) {
         case NSFetchedResultsChangeInsert:
             [self.tableView insertSections: [NSIndexSet indexSetWithIndex:sectionIndex]
@@ -104,6 +106,8 @@
      forChangeType:(NSFetchedResultsChangeType)type
       newIndexPath:(NSIndexPath *)newIndexPath {
     
+    [super controller:controller didChangeObject:anObject atIndexPath:indexPath forChangeType:type newIndexPath:newIndexPath];
+
     switch(type) {
             // Data was inserted -- insert the data into the table view
         case NSFetchedResultsChangeInsert:

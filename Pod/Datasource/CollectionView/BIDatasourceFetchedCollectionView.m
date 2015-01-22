@@ -74,7 +74,8 @@
   didChangeSection:(id <NSFetchedResultsSectionInfo>)sectionInfo
            atIndex:(NSUInteger)sectionIndex
      forChangeType:(NSFetchedResultsChangeType)type {
-    
+    [super controller:controller didChangeSection:sectionInfo atIndex:sectionIndex forChangeType:type];
+
     NSMutableDictionary *change = [NSMutableDictionary new];
     switch(type) {
         case NSFetchedResultsChangeInsert:
@@ -97,6 +98,8 @@
        atIndexPath:(NSIndexPath *)indexPath
      forChangeType:(NSFetchedResultsChangeType)type
       newIndexPath:(NSIndexPath *)newIndexPath {
+    [super controller:controller didChangeObject:anObject atIndexPath:indexPath forChangeType:type newIndexPath:newIndexPath];
+
     NSMutableDictionary *change = [NSMutableDictionary new];
     switch(type) {
         case NSFetchedResultsChangeInsert:
@@ -116,11 +119,13 @@
 }
 
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
+    [super controllerWillChangeContent:controller];
     [self resetFetchedResultControllerChanges];
 }
 
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
-    
+    [super controllerDidChangeContent:controller];
+
     if ([self.sectionChanges count]) {
         [self.collectionView performBatchUpdates:^{
             

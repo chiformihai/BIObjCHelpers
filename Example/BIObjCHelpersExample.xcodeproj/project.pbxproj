@@ -41,6 +41,8 @@
 		6566331E1A6940B800A9BD67 /* BIAllCountriesDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6566331D1A6940B800A9BD67 /* BIAllCountriesDatasource.m */; };
 		656633251A69464700A9BD67 /* BIAllCapitalsDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 656633241A69464700A9BD67 /* BIAllCapitalsDatasource.m */; };
 		6566332A1A69473200A9BD67 /* BIAllCapitalsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 656633291A69473200A9BD67 /* BIAllCapitalsCollectionViewCell.m */; };
+		6574F4541A6EA8DB008921FF /* BIDatasourceFetchedResultsCallbacks.m in Sources */ = {isa = PBXBuildFile; fileRef = 6574F4531A6EA8DB008921FF /* BIDatasourceFetchedResultsCallbacks.m */; };
+		6574F4561A6EAE47008921FF /* BIDatasourceFetchedResultsCallbacksTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6574F4551A6EAE47008921FF /* BIDatasourceFetchedResultsCallbacksTestCase.m */; };
 		658AF6961A56BB8E00D48C74 /* BIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 658AF68A1A56BB8E00D48C74 /* BIAppDelegate.m */; };
 		658AF6971A56BB8E00D48C74 /* BIMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 658AF68C1A56BB8E00D48C74 /* BIMain.storyboard */; };
 		658AF6991A56BB8E00D48C74 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 658AF6931A56BB8E00D48C74 /* Images.xcassets */; };
@@ -125,6 +127,9 @@
 		656633241A69464700A9BD67 /* BIAllCapitalsDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BIAllCapitalsDatasource.m; path = Datasource/BIAllCapitalsDatasource.m; sourceTree = "<group>"; };
 		656633281A69473200A9BD67 /* BIAllCapitalsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BIAllCapitalsCollectionViewCell.h; path = Views/Cell/BIAllCapitalsCollectionViewCell.h; sourceTree = "<group>"; };
 		656633291A69473200A9BD67 /* BIAllCapitalsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BIAllCapitalsCollectionViewCell.m; path = Views/Cell/BIAllCapitalsCollectionViewCell.m; sourceTree = "<group>"; };
+		6574F4521A6EA8DB008921FF /* BIDatasourceFetchedResultsCallbacks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BIDatasourceFetchedResultsCallbacks.h; path = ../Pod/Datasource/Base/BIDatasourceFetchedResultsCallbacks.h; sourceTree = SOURCE_ROOT; };
+		6574F4531A6EA8DB008921FF /* BIDatasourceFetchedResultsCallbacks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BIDatasourceFetchedResultsCallbacks.m; path = ../Pod/Datasource/Base/BIDatasourceFetchedResultsCallbacks.m; sourceTree = SOURCE_ROOT; };
+		6574F4551A6EAE47008921FF /* BIDatasourceFetchedResultsCallbacksTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BIDatasourceFetchedResultsCallbacksTestCase.m; path = Datasource/Base/BIDatasourceFetchedResultsCallbacksTestCase.m; sourceTree = "<group>"; };
 		658AF65F1A56BAA500D48C74 /* BIObjCHelpersExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BIObjCHelpersExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		658AF6781A56BAA600D48C74 /* BIObjCHelpersExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BIObjCHelpersExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		658AF67D1A56BAA600D48C74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = SupportingFiles/Info.plist; sourceTree = "<group>"; };
@@ -651,6 +656,8 @@
 			children = (
 				65D6248D1A63B42500095EF0 /* BIDatasourceFetchedResultsBase.h */,
 				65D6248E1A63B42500095EF0 /* BIDatasourceFetchedResultsBase.m */,
+				6574F4521A6EA8DB008921FF /* BIDatasourceFetchedResultsCallbacks.h */,
+				6574F4531A6EA8DB008921FF /* BIDatasourceFetchedResultsCallbacks.m */,
 			);
 			name = Base;
 			path = ../../Pod/Datasource/Base;
@@ -670,6 +677,7 @@
 			isa = PBXGroup;
 			children = (
 				65D624921A63B55600095EF0 /* BIDatasourceFetchedResultsBaseTestCase.m */,
+				6574F4551A6EAE47008921FF /* BIDatasourceFetchedResultsCallbacksTestCase.m */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -881,6 +889,7 @@
 				655C47971A659AAE001A0AAE /* BIAppStarterSetupCoreData.m in Sources */,
 				6527C9891A6002910088D9BC /* BIOperationQueue.m in Sources */,
 				6566331E1A6940B800A9BD67 /* BIAllCountriesDatasource.m in Sources */,
+				6574F4541A6EA8DB008921FF /* BIDatasourceFetchedResultsCallbacks.m in Sources */,
 				6527C9571A5FDC240088D9BC /* BICapital.m in Sources */,
 				655C47941A659A86001A0AAE /* BIAppStartersFactory.m in Sources */,
 				6527C9541A5FDB740088D9BC /* BIModelBase.m in Sources */,
@@ -909,6 +918,7 @@
 				6527C9831A5FFA210088D9BC /* BICountryTestCase.m in Sources */,
 				654D9ACF1A5E9CD500D853C4 /* BISerialOperationQueueTestCase.m in Sources */,
 				655C477E1A658E86001A0AAE /* BIStartersFactoryTestCase.m in Sources */,
+				6574F4561A6EAE47008921FF /* BIDatasourceFetchedResultsCallbacksTestCase.m in Sources */,
 				6527C9681A5FF54E0088D9BC /* BICapitalTestCase.m in Sources */,
 				65D6249D1A63DEB300095EF0 /* BIDatasourceFetchedTableViewTestCase.m in Sources */,
 				655C479F1A65A623001A0AAE /* BIAppStarterPopulateCoreDataTestCase.m in Sources */,

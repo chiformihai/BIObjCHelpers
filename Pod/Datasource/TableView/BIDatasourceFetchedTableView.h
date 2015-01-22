@@ -8,11 +8,11 @@
 
 @import UIKit;
 
-#import "BIDatasourceFetchedResultsBase.h"
+#import "BIDatasourceFetchedResultsCallbacks.h"
 
 typedef void(^BIDatasourceFetchedTableViewConfigureCell)(id cell, NSIndexPath *indexPath);
 
-@interface BIDatasourceFetchedTableView : BIDatasourceFetchedResultsBase<UITableViewDataSource>
+@interface BIDatasourceFetchedTableView : BIDatasourceFetchedResultsCallbacks<UITableViewDataSource>
 
 + (instancetype)datasourceWithTableView:(UITableView *)tableView;
 - (instancetype)initWithTableView:(UITableView *)tableView;
